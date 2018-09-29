@@ -1,0 +1,422 @@
+/*
+ Theme Name:   Focus
+ Theme URI:    none
+ Description:  Focus is a Twenty Seventeen Child Theme
+ Author:       Pierre Signolat
+ Author URI:   none
+ Template:     twentyseventeen
+ Version:      1.0
+ License:      GNU General Public License v2 or later
+ License URI:  http://www.gnu.org/licenses/gpl-2.0.html
+ Tags:         light, dark, two-columns, right-sidebar, responsive-layout, accessibility-ready
+ Text Domain:  focus-twentyseventeen-child
+ GitHub Theme URI: https://github.com/pierrepierrepierre/focus-twentyseventeen-child
+ GitHub Branch:    master
+*/
+
+/* FONTS */
+
+@font-face {
+    font-family: 'Cormorant';
+    src: url('fonts/Cormorant-Bold-webfont.woff') format('woff');
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Cormorant';
+    src: url('fonts/Cormorant-Bolditalic-webfont.woff') format('woff');
+    font-weight: 800;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Cormorant';
+    src: url('fonts/Cormorant-italic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Cormorant';
+    src: url('fonts/Cormorant-Lightitalic-webfont.woff') format('woff');
+    font-weight: 100;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Cormorant';
+    src: url('fonts/Cormorant-Light-webfont.woff') format('woff');
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Cormorant';
+    src: url('fonts/Cormorant-MediumItalic-webfont.woff') format('woff');
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Cormorant';
+    src: url('fonts/Cormorant-Medium-webfont.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Cormorant';
+    src: url('fonts/Cormorant-Regular-webfont.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Cormorant';
+    src: url('fonts/Cormorant-SemiBoldItalic-webfont.woff') format('woff');
+    font-weight: 700;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Cormorant';
+    src: url('fonts/Cormorant-SemiBold-webfont.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+
+/* TWENTYSEVENTEEN BUG ------------ */
+
+.has-sidebar:not(.error404) #primary {
+    float: left;
+    width: 100%;
+}
+
+/* FULL WIDTH --- */
+
+.wrap {
+	max-width: 80%;
+}
+
+#masthead .warp {
+	display:inline-block;
+}
+
+/* ----- FULL WIDTH */
+
+
+body, h1, h2, h3, h4, h5, button, input, select, textarea {
+  font-family: "Cormorant", "Times New Roman", Times, serif;
+	font-size:1rem;
+}
+
+.site-title {
+  font-weight: normal;
+  text-transform: none;
+	display:inline-block;
+}
+
+.site-navigation-fixed.navigation-top {
+    z-index: 1000;
+}
+
+.wrap {
+    margin-left: 0;
+	padding-left: 2em;
+	padding-right: 2em;
+}
+
+.entry-meta {
+  display: inline;
+  float: right;
+}
+
+.blog .site-main > article, .archive .site-main > article, .search .site-main > article {
+    padding-bottom: 0em;
+    margin-bottom: 2em;
+}
+
+.entry-content .excerpt {
+  max-width: 60%;
+  margin: auto;
+}
+
+.post-thumbnail {
+ margin: auto;
+ max-height: 80%;
+}
+
+.post-thumbnail a img {
+  height:auto;
+  width: auto;
+  max-width: 100%;
+  max-height: 80vh;
+}
+
+.post-thumbnail a:hover img, .post-thumbnail a:focus img {
+    opacity: 1;
+}
+
+.archive .post-thumbnail a .entry-title, .archive .post-thumbnail .tags a,
+.home.blog .post-thumbnail a .entry-title, .home.blog .post-thumbnail .tags a {
+  -webkit-transition: color 5s; /* Safari */
+  transition:color 5s;
+  color:transparent;
+}
+
+.home.blog .post-thumbnail a:hover .entry-title, .home.blog .post-thumbnail a:focus .entry-title,
+.home.blog .post-thumbnail:hover .tags  a, .home.blog .post-thumbnail:focus .tags  a,
+.archive .post-thumbnail a:hover .entry-title, .archive .post-thumbnail a:focus .entry-title,
+.archive .post-thumbnail:hover .tags  a, .archive .post-thumbnail:focus .tags  a{
+  color:#fff;
+}
+
+
+.home.blog .tags, .archive .tags{
+  float:right;
+  clear:both;
+}
+
+.site-footer {
+    border: 0 transparent;
+}
+
+/* GSS SLIDESHOW */
+
+#page .gss-info {
+  background:transparent;
+}
+
+#page .gss-pager .cycle-pager-active, page .gss-pager .cycle-pager-active:hover {
+    background-color: #666;
+}
+
+#gslideshow_pager a, #gslideshow a:focus, #gslideshow a:hover,  #gslideshow a {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+#gslideshow .gss-prev:hover, #gslideshow .gss-next:hover, #gslideshow .gss-play:hover {
+    color: #666;
+    background-color: #333;
+    border:none;
+}
+
+.removed-gallery .gss-container.no-captions:nth-of-type(1){
+  display: none;
+}
+
+.gss-container {
+    max-width: 1200px;
+}
+
+/* NAVIGATION  ---------*/
+
+
+.single-featured-image-header{
+  border:0px;
+}
+
+.colors-dark #masthead.site-header{
+    background-color: #222;
+}
+
+body.colors-dark .single-featured-image-header {
+    background-color: #000;
+}
+
+.site-branding {
+  padding-bottom: 0em;
+}
+
+.navigation-top {
+	border: 0 transparent;
+    display: inline-block;
+    left: auto;
+    top: auto;
+    bottom: auto;
+    position: relative;
+    right: auto;
+    width: auto;
+    margin-left: 3em;
+}
+
+
+
+/* SMALL THUMBS ------ */
+
+.post-thumbnail {
+ margin: 0;
+ max-height: inherit;
+}
+
+
+.blog #primary article:not(.category-news),
+.archive #primary article:not(.category-news),
+.search #primary article,
+.error404 #primary .page-content,
+.error404.has-sidebar #primary .page-content{
+    /* float: right;*/
+    max-width: calc(100% - 20px);
+    /* min-height: calc(100vh - 70px); */
+    display: flex;
+    flex-direction: column;
+	flex: 0 0 20%;
+    /* justify-content: space-around; */
+    border-bottom: 0 none;
+    padding : 0.2em 0;
+    margin: 10px;
+    overflow: hidden;
+}
+
+body.category-news main.site-main {
+	display:block;
+}
+
+body:not(.has-sidebar):not(.page-one-column) .page-header,
+body.has-sidebar.error404 #primary .page-header,
+body.page-two-column.archive:not(.has-sidebar) #primary .page-header {
+	float: left;
+	width: 20%;
+}
+
+body.page-two-column:not(.archive) #primary .entry-header {
+	float:none;
+	width: auto;
+	margin-bottom:3em;
+}
+
+	.blog:not(.has-sidebar) #primary article,
+	.archive:not(.page-one-column):not(.has-sidebar) #primary article,
+	.search:not(.has-sidebar) #primary article,
+	.error404:not(.has-sidebar) #primary .page-content,
+	.error404.has-sidebar #primary .page-content,
+	body.page-two-column:not(.archive) #primary .entry-content,
+	body.page-two-column #comments,
+	body.page-two-column article.category-news .entry-content{
+		float: right;
+		width: 74%;
+	}
+
+	.navigation.pagination {
+		clear: both;
+		float: right;
+		width: 74%;
+	}
+
+
+.home main, .archive main {
+    display: flex;
+    flex-wrap: wrap;
+    /*justify-content: space-between;*/
+	margin: 0 -10px;
+}
+
+body.page main {
+	display:block;
+}
+
+.post-thumbnail a img {
+  width:100%;
+}
+
+.entry-content .excerpt {
+    padding-left:0.2em;
+    max-width:100%;
+    margin: auto;
+}
+
+/* ------- ARCHIVE --- */
+
+body:not(.twentyseventeen-front-page) .has-post-thumbnail .entry-content {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* ------- TEXTS ----- */
+
+h2, .home.blog .entry-title, .page .panel-content .recent-posts .entry-title , .single-post .entry-title,
+	.page .entry-title, .entry-content .excerpt, .page-title, .site-title, blockquote {
+	font-size:14px;
+	font-size:1em;
+}
+
+blockquote {
+	font-style: normal;
+	line-height:normal;
+}
+
+
+
+/* ------- MEDIA QUERIES */
+
+@media screen and (min-width:200px){
+
+
+	h2, .home.blog .entry-title, .page .panel-content .recent-posts .entry-title , .single-post .entry-title,
+	.page .entry-title, .entry-content .excerpt, .page-title, .site-title, blockquote {
+		font-size:14px;
+		font-size:1em;
+}
+
+	blockquote {
+		padding-left:25%;
+	}
+}
+
+@media screen and (max-width:70em) {
+		.wrap {
+		max-width: 100%;
+	}
+
+}
+
+@media screen and (max-width: 50em){
+  .blog #primary article, .archive #primary article, .search #primary article {
+	  flex-basis: 30%;
+  }
+	blockquote {
+		padding-left :10%;
+	}
+	.wrap {
+		max-width: 100%;
+	}
+
+}
+
+@media screen and (max-width: 48em){
+	.navigation-top {
+    display:block;
+}
+}
+
+@media screen and (max-width: 30em){
+  .blog #primary article, .archive #primary article, .search #primary article {
+	  flex-basis: 50%;
+  }
+	.blog .site-main > article, .archive .site-main > article, .search .site-main > article {
+      padding-bottom: 10vh;
+      padding-top: 10vh;
+      /* padding-bottom: 0em; */
+  }
+	blockquote {
+		padding-left :0;
+	}
+
+	body.page-two-column:not(.archive) #primary .entry-content, body.page-two-column article.category-news .entry-content {
+    float: none;
+    width: auto;
+}
+
+	.blog #primary article, .archive #primary article, .search #primary article {
+	  flex-basis: 100%;
+  }
+}
